@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ProductService, Product } from '../../services/product';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Header } from '../../header/header';
+import { Header } from '../../components/header/header';
 
 @Component({
   standalone: true,
