@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from './product';
 
-interface Order {
+export interface IOrder {
+  id?: number;
   items: Product[];
   totalPrice: number;
   createdAt: string;
@@ -18,8 +19,17 @@ export class OrderService {
 
   constructor(private http: HttpClient) { }
 
-  createOrder(product: Order): Observable<Order> {
-    return this.http.post<Order>(this.apiUrl, product);
+  createOrder(order: IOrder): Observable<IOrder> {
+    return this.http.post<IOrder>(this.apiUrl, order);
   }
-  
+
+  // Получить все заказы
+  getOrders(): Observable<IOrder[]> {
+    return this.http.get<IOrder[]>(this.apiUrl);
+  }
+
+  // Удалить заказ по id
+  deleteOrder(orderId: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${orderId}`);
+  }
 }
