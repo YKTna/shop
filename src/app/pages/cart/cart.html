@@ -11,7 +11,7 @@
           <h5 class="card-title">{{ product.name }}</h5>
           <p class="card-text">{{ product.description }}</p>
           <div class="mt-auto d-flex justify-content-between align-items-center">
-            <div>${{ product.price }}</div>
+            <div>{{product.price}} Р</div>
             <div>
               <div *ngIf="product.quantity > 0" class="input-group input-group-sm" style="width: 110px;">
                 <button class="btn btn-outline-secondary" type="button" (click)="decrementQuantity(product)">−</button>

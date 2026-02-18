@@ -1,53 +1,35 @@
 {
   "products": [
-    {
-      "id": 1,
-      "name": "Товар 1",
-      "description": "Описание товара 3123",
-      "price": 1000,
-      "quantity": 0,
-      "isFavorite": false
-    },
-    {
-      "id": 2,
-      "name": "Товар 2",
-      "description": "Описание товара 2",
-      "price": 2000,
-      "quantity": 0,
-      "isFavorite": true
-    },
-    {
-      "id": 3,
-      "quantity": 0,
-      "name": "Товар 43",
-      "description": "1231231",
-      "price": 1000,
-      "isFavorite": false
-    }
+    { "id": 1, "name": "Беговые кроссовки", "description": "Легкие и удобные кроссовки для бега", "price": 4500, "quantity": 0, "isFavorite": false },
+    { "id": 2, "name": "Футбольный мяч", "description": "Официальный мяч FIFA размер 5", "price": 3200, "quantity": 0, "isFavorite": true },
+    { "id": 3, "name": "Велошлем", "description": "Защитный шлем для велосипедистов", "price": 2500, "quantity": 0, "isFavorite": false },
+    { "id": 4, "name": "Йога-коврик", "description": "Антискользящий коврик для йоги", "price": 1200, "quantity": 0, "isFavorite": false },
+    { "id": 5, "name": "Гантели комплект 2x5 кг", "description": "Чугунные гантели с покрытием", "price": 3500, "quantity": 0, "isFavorite": true },
+    { "id": 6, "name": "Теннисная ракетка", "description": "Ракетка средней категории для тенниса", "price": 5700, "quantity": 0, "isFavorite": false },
+    { "id": 7, "name": "Прыжковая скакалка", "description": "Регулируемая скакалка для фитнеса", "price": 800, "quantity": 0, "isFavorite": false },
+    { "id": 8, "name": "Роликовые коньки", "description": "Удобные роликовые коньки с колесами PU", "price": 6800, "quantity": 0, "isFavorite": true },
+    { "id": 9, "name": "Пояс для фитнеса", "description": "Пояс для поддержки спины при тренировках", "price": 1300, "quantity": 0, "isFavorite": false },
+    { "id": 10, "name": "Велосипедный насос", "description": "Компактный ручной насос для велосипеда", "price": 900, "quantity": 0, "isFavorite": false },
+    { "id": 11, "name": "Футболка спортивная", "description": "Дышащая футболка для тренировок", "price": 1500, "quantity": 0, "isFavorite": false },
+    { "id": 12, "name": "Спортивные очки", "description": "Очки с UV защитой для активного отдыха", "price": 2800, "quantity": 0, "isFavorite": true },
+    { "id": 13, "name": "Баскетбольный мяч", "description": "Мяч для уличного и зального баскетбола", "price": 3400, "quantity": 0, "isFavorite": false },
+    { "id": 14, "name": "Коврик для гимнастики", "description": "Пенополиуретановый коврик для упражнений", "price": 2200, "quantity": 0, "isFavorite": false },
+    { "id": 15, "name": "Пульсометр", "description": "Безопасный монитор сердечного ритма", "price": 6300, "quantity": 0, "isFavorite": false },
+    { "id": 16, "name": "Спортивные штаны", "description": "Легкие тренировочные штаны", "price": 2100, "quantity": 0, "isFavorite": false },
+    { "id": 17, "name": "Рюкзак для велосипеда", "description": "Водоотталкивающий рюкзак с креплениями", "price": 4700, "quantity": 0, "isFavorite": true },
+    { "id": 18, "name": "Плавательные очки", "description": "Очки с антифог покрытием для плавания", "price": 1700, "quantity": 0, "isFavorite": false },
+    { "id": 19, "name": "Турник настенный", "description": "Настенный турник для подтягиваний", "price": 7900, "quantity": 0, "isFavorite": false },
+    { "id": 20, "name": "Спортивные перчатки", "description": "Перчатки для фитнеса и занятий спортом", "price": 1200, "quantity": 0, "isFavorite": false },
+    { "id": 21, "name": "Эспандер", "description": "Резиновый тренажёр для мышц рук", "price": 700, "quantity": 0, "isFavorite": false },
+    { "id": 22, "name": "Футбольные бутсы", "description": "Легкие бутсы с хорошим сцеплением", "price": 8600, "quantity": 0, "isFavorite": true },
+    { "id": 23, "name": "Комплект гимнастических колец", "description": "Кольца из дерева для силовых тренировок", "price": 5300, "quantity": 0, "isFavorite": false },
+    { "id": 24, "name": "Электронные весы", "description": "Весы с цифровым дисплеем и анализом тела", "price": 3700, "quantity": 0, "isFavorite": false },
+    { "id": 25, "name": "Тренажер для пресса", "description": "Удобное устройство для тренировки мышц живота", "price": 2600, "quantity": 0, "isFavorite": false },
+    { "id": 26, "name": "Фляга для воды", "description": "Спортивная фляга с удобным клапаном", "price": 600, "quantity": 0, "isFavorite": false },
+    { "id": 27, "name": "Чехол для спортивного инвентаря", "description": "Удобный сумка-чехол для хранения", "price": 3200, "quantity": 0, "isFavorite": false },
+    { "id": 28, "name": "Боксерские перчатки", "description": "Перчатки из натуральной кожи", "price": 7500, "quantity": 0, "isFavorite": false },
+    { "id": 29, "name": "Горнолыжные очки", "description": "Очки с защитой от яркого солнца и ветра", "price": 4300, "quantity": 0, "isFavorite": false },
+    { "id": 30, "name": "Скакалка для кроссфита", "description": "Высокоскоростная регулируемая скакалка", "price": 1400, "quantity": 0, "isFavorite": false }
   ],
-  "orders": [
-    {
-      "items": [
-        {
-          "id": 1,
-          "name": "Товар 1",
-          "description": "Описание товара 1",
-          "price": 1000,
-          "quantity": 1,
-          "isFavorite": true
-        },
-        {
-          "id": 2,
-          "name": "Товар 2",
-          "description": "Описание товара 2",
-          "price": 2000,
-          "quantity": 1,
-          "isFavorite": false
-        }
-      ],
-      "totalPrice": 3000,
-      "createdAt": "2026-02-18T18:57:02.535Z",
-      "id": 1
-    }
-  ]
+  "orders": []
 }
