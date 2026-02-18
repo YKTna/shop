@@ -23,12 +23,10 @@ export class OrderService {
     return this.http.post<IOrder>(this.apiUrl, order);
   }
 
-  // Получить все заказы
   getOrders(): Observable<IOrder[]> {
     return this.http.get<IOrder[]>(this.apiUrl);
   }
 
-  // Удалить заказ по id
   deleteOrder(orderId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${orderId}`);
   }
