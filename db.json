@@ -48,29 +48,6 @@
       "totalPrice": 3000,
       "createdAt": "2026-02-18T18:57:02.535Z",
       "id": 1
-    },
-    {
-      "items": [
-        {
-          "id": 1,
-          "name": "Товар 1",
-          "description": "Описание товара 1",
-          "price": 1000,
-          "quantity": 1,
-          "isFavorite": true
-        },
-        {
-          "id": 2,
-          "name": "Товар 2",
-          "description": "Описание товара 2",
-          "price": 2000,
-          "quantity": 2,
-          "isFavorite": false
-        }
-      ],
-      "totalPrice": 5000,
-      "createdAt": "2026-02-18T18:59:42.968Z",
-      "id": 2
     }
   ]
 }
