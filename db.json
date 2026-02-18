@@ -5,7 +5,7 @@
       "name": "Товар 1",
       "description": "Описание товара 1",
       "price": 1000,
-      "quantity": 0,
+      "quantity": 1,
       "isFavorite": true
     },
     {
@@ -13,7 +13,7 @@
       "name": "Товар 2",
       "description": "Описание товара 2",
       "price": 2000,
-      "quantity": 0,
+      "quantity": 1,
       "isFavorite": false
     },
     {
@@ -25,6 +25,5 @@
       "isFavorite": true
     }
   ],
-  "orders": [],
-  "cart": []
+  "orders": []
 }

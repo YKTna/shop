@@ -17,7 +17,6 @@
                 <button class="btn btn-outline-secondary" type="button" (click)="incrementQuantity(product)">+</button>
               </div>
               <button *ngIf="product.quantity === 0" class="btn btn-sm btn-success ms-2" (click)="incrementQuantity(product)">В корзину</button>
-              <button class="btn btn-sm btn-primary me-2" [routerLink]="['/product', product.id]">Подробнее</button>
               <button class="btn btn-sm" [ngClass]="{'btn-warning': product.isFavorite, 'btn-outline-warning': !product.isFavorite}" (click)="toggleFavorite(product)">
                 ❤️
               </button>

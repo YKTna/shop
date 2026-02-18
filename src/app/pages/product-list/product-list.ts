@@ -25,12 +25,12 @@ ngOnInit(): void {
 }
 
   decrementQuantity(product: Product) {
-    product.quantity = product.quantity - 1;
+    product.quantity--;
     this.productService.updateProduct(product).subscribe();
   }
 
   incrementQuantity(product: Product) {
-    product.quantity = product.quantity + 1;
+    product.quantity++;
     this.productService.updateProduct(product).subscribe();
   }
 
