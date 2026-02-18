@@ -6,7 +6,7 @@
       "description": "Описание товара 1",
       "price": 1000,
       "quantity": 1,
-      "isFavorite": true
+      "isFavorite": false
     },
     {
       "id": 2,
