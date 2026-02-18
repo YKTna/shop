@@ -1,1 +1,62 @@
-<p>admin works!</p>
+<div class="container py-4">
+  <app-header></app-header>
+  <h2 class="mb-4">Каталог товаров</h2>
+
+  <button class="btn btn-primary mb-3" (click)="openAddModal()">Добавить товар</button>
+
+  <div class="row">
+    <div *ngIf="products.length === 0">Товары не загружены.</div>
+    <div *ngFor="let product of products" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card h-100">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">{{product.description}}</p>
+          <div class="mt-auto d-flex justify-content-between align-items-center">
+            <div>${{product.price}}</div>
+            <div>
+              <button class="btn btn-sm btn-info ms-2" (click)="openEditModal(product)">✏️</button>
+              <button class="btn btn-sm btn-danger ms-2" (click)="deleteProduct(product)">🗑️</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" [class.show]="showModal" [style.display]="showModal ? 'block' : 'none'">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form (ngSubmit)="saveProduct()">
+          <div class="modal-header">
+            <h5 class="modal-title">{{editMode ? 'Редактирование товара' : 'Добавление товара'}}</h5>
+            <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Название</label>
+              <input type="text" class="form-control" [(ngModel)]="currentProduct.name" name="name" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Описание</label>
+              <textarea class="form-control" [(ngModel)]="currentProduct.description" name="description" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Цена</label>
+              <input type="number" class="form-control" [(ngModel)]="currentProduct.price" name="price" required min="0" />
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" [(ngModel)]="currentProduct.isFavorite" name="isFavorite" id="favoriteCheck" />
+              <label class="form-check-label" for="favoriteCheck">Избранное</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">{{editMode ? 'Сохранить' : 'Добавить'}}</button>
+            <button type="button" class="btn btn-secondary" (click)="closeModal()">Отмена</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop fade show" *ngIf="showModal"></div>
+</div>

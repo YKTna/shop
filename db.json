@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Товар 1",
-      "description": "Описание товара 1",
+      "description": "Описание товара 3123",
       "price": 1000,
       "quantity": 1,
       "isFavorite": false
@@ -18,11 +18,11 @@
     },
     {
       "id": 3,
-      "name": "Товар 3",
-      "description": "Описание товара 3",
-      "price": 3000,
       "quantity": 0,
-      "isFavorite": true
+      "name": "Товар 43",
+      "description": "1231231",
+      "price": 1000,
+      "isFavorite": false
     }
   ],
   "orders": [
