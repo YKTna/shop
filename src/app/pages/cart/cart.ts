@@ -69,35 +69,45 @@ export class Cart {
   }
 
   checkout() {
-    if (this.filteredProducts.length === 0) return;
+  if (this.filteredProducts.length === 0) return;
 
-    this.isLoading = true;
+  this.isLoading = true;
 
-    const orderData = {
-      items: this.filteredProducts.map(p => ({
-        productId: p.id,
-        quantity: p.quantity,
-        price: p.price,
-      })),
-      totalPrice: this.totalPrice,
-      createdAt: new Date().toISOString(),
-    };
+  const orderData = {
+    items: this.filteredProducts,
+    totalPrice: this.totalPrice,
+    createdAt: new Date().toISOString(),
+  };
 
-    this.orderService.createOrder(orderData as any)
-      .pipe(finalize(() => {
-        this.isLoading = false;
-        this.cdr.detectChanges();
-      }))
-      .subscribe({
-        next: () => {
-          alert('Заказ успешно оформлен!');
-          this.products.forEach(p => p.quantity = 0);
-          this.filterProducts();
-        },
-        error: (err: any) => {
-          alert('Ошибка при оформлении заказа.');
-          console.error(err);
-        }
-      });
-  }
+  this.orderService.createOrder(orderData)
+    .pipe(finalize(() => {
+      this.isLoading = false;
+      this.cdr.detectChanges();
+    }))
+    .subscribe({
+      next: () => {
+        const updateRequests = this.products
+          .filter(p => p.quantity > 0)
+          .map(product => {
+            product.quantity = 0;
+            return this.productService.updateProduct(product).toPromise();
+          });
+
+        Promise.all(updateRequests)
+          .then(() => {
+            alert('Заказ успешно оформлен!');
+            this.filterProducts();
+          })
+          .catch(err => {
+            alert('Заказ оформлен, но возникла ошибка при очистке товаров.');
+            console.error(err);
+            this.filterProducts();
+          });
+      },
+      error: (err: any) => {
+        alert('Ошибка при оформлении заказа.');
+        console.error(err);
+      }
+    });
+  } 
 }

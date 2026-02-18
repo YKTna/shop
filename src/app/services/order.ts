@@ -3,6 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from './product';
 
+interface Order {
+  items: Product[];
+  totalPrice: number;
+  createdAt: string;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -12,8 +18,8 @@ export class OrderService {
 
   constructor(private http: HttpClient) { }
 
-  createOrder(product: Product[]): Observable<Product[]> {
-    return this.http.post<Product[]>(this.apiUrl, product);
+  createOrder(product: Order): Observable<Order> {
+    return this.http.post<Order>(this.apiUrl, product);
   }
   
 }
