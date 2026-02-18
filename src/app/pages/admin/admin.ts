@@ -26,6 +26,7 @@ export class Admin implements OnInit {
     this.loadProducts();
   }
 
+  
   loadProducts() {
     this.productService.getProducts().subscribe(data => {
       this.products = data;
