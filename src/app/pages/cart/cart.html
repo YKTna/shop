@@ -2,7 +2,7 @@
   <app-header></app-header>
   <h2 class="mb-4">Корзина</h2>
   
-  <div *ngIf="filteredProducts.length === 0">Товары не загружены или отсутствуют в количестве больше 0.</div>
+  <div *ngIf="filteredProducts.length === 0">В корзине нет товаров.</div>
 
   <div class="row">
     <div *ngFor="let product of filteredProducts" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
