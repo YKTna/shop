@@ -1,9 +1,0 @@
-{
-  "products": [
-    { "id": 1, "name": "Товар 1", "description": "Описание товара 1", "price": 1000, "isFavorite": false },
-    { "id": 2, "name": "Товар 2", "description": "Описание товара 2", "price": 2000, "isFavorite": false },
-    { "id": 3, "name": "Товар 3", "description": "Описание товара 3", "price": 3000, "isFavorite": false }
-  ],
-  "orders": [],
-  "cart": []
-}

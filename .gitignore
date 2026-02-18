@@ -1,0 +1,6 @@
+# Node.js / Angular
+node_modules/
+dist/
+tmp/
+out-tsc/
+.angular/

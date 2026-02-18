@@ -1,0 +1,24 @@
+<div class="container py-4">
+      <div class="d-flex mb-4 gap-2 flex-wrap">
+        <button class="btn btn-outline-primary" 
+          (click)="goTo('catalog')" 
+          [class.active]="activeMenu === 'catalog'">Каталог</button>
+
+        <button class="btn btn-outline-primary" 
+          (click)="goTo('cart')" 
+          [class.active]="activeMenu === 'cart'">Корзина</button>
+
+        <button class="btn btn-outline-primary" 
+          (click)="goTo('favorites')" 
+          [class.active]="activeMenu === 'favorites'">Избранное</button>
+
+        <button class="btn btn-outline-primary" 
+          (click)="goTo('orders')" 
+          [class.active]="activeMenu === 'orders'">Мои заказы</button>
+
+        <button class="btn btn-warning ms-auto" (click)="goTo('orders')" 
+          [class.active]="activeMenu === 'orders'">
+          Редактирование
+        </button>
+      </div>
+</div>
